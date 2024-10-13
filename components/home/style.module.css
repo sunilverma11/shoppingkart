@@ -1,8 +1,9 @@
 .mainContainer{
-    color:red;
+    color:green;
     background-color: lightblue;
     padding: 20px;
-    border-radius: 5px
+    border-radius: 5px;
+    justify-content: center;
 }
 
     

@@ -1,3 +1,12 @@
-.navConatiner{
+.navContainer{
     color: green;
+    font-weight: bolder;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navRight{
+    display: flex;
+    gap: 10px;
 }
