@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 
 const Products:React.FC = ()=>{
+    console.log("in products")
     return (        
         <Layout>
             <div>
@@ -15,11 +16,11 @@ const Products:React.FC = ()=>{
 }
 export default Products;
 
-export const getServerSideProps = async ()=>{
-  const res = await fetch("http://localhost:3000/api/hello");
-  const data = await res.json();
-  console.log(data)
-  return {
-    props : {name:data.name}
-  }
-}
+// export const getServerSideProps = async ()=>{
+//   const res = await fetch("http://localhost:3000/api/hello");
+//   const data = await res.json();
+//   console.log(data)
+//   return {
+//     props : {name:data.name}
+//   }
+// }
