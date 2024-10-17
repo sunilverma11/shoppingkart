@@ -1,17 +1,17 @@
-import {Schema, model, models} from "mongoose";
+import mongoose from "mongoose";
 
-interface IUser {
+interface IUser extends mongoose.Document {
     name: string,
-    email:string,
-    password:string
+    email: string,
+    password: string
 }
-const userModel = new Schema<IUser>({
-    name:{type:String},
-    email:{type:String, required:true,},
-    password:{type:String}
-},{
-    versionKey:false,
-    timestamps:true
+const userModel = new mongoose.Schema<IUser>({
+    name: { type: String },
+    email: { type: String, required: true, },
+    password: { type: String }
+}, {
+    versionKey: false,
+    timestamps: true
 });
 
-export const UserModel = models.users || model("users",userModel)
+export const UserModel = mongoose.models.users || mongoose.model("users", userModel)

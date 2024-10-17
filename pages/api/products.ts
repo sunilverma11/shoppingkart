@@ -1,7 +1,7 @@
 // pages/api/tasks.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { TaskModel } from '../../lib/models/task.model';
-import  dbConnect  from '../../lib/dbConnect';
+import { TaskModel } from '../../lib/models/product.model';
+import dbConnect from '../../lib/dbConnect';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     dbConnect();
     const { method } = req;
