@@ -13,15 +13,15 @@ export default async function UserController(req: NextApiRequest, res: NextApiRe
         return;
     }
     switch (method) {
-        case "GET":
-            try {
-                //For Dashboard
-                const usersList = await UserModel.find({});
-                res.status(200).json(usersList);
-            } catch (error) {
-                res.status(501).json({ error: error })
-            }
-            break;
+        // case "GET":
+        //     try {
+        //         //For Dashboard
+        //         const usersList = await UserModel.find({});
+        //         res.status(200).json(usersList);
+        //     } catch (error) {
+        //         res.status(501).json({ error: error })
+        //     }
+        //     break;
         case "POST":
             try {
                 //For Register
